@@ -1,0 +1,34 @@
+config VAX
+	def_bool y
+	select HAVE_MEMBLOCK
+
+config MMU
+	def_bool y
+
+config RWSEM_GENERIC_SPINLOCK
+	def_bool y
+
+config RWSEM_XCHGADD_ALGORITHM
+	def_bool y
+
+config HZ
+	int
+	default 100
+
+source "init/Kconfig"
+
+source "kernel/time/Kconfig"
+
+source "mm/Kconfig"
+
+source "net/Kconfig"
+
+source "drivers/Kconfig"
+
+source "fs/Kconfig"
+
+source "security/Kconfig"
+
+source "crypto/Kconfig"
+
+source "lib/Kconfig"
